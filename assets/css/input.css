@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply h-screen  overflow-x-hidden m-0 bg-pink-300;
+}
+
+.cont {
+  @apply m-0 w-screen min-h-[100vh] relative bg-zinc-600 px-[300px] pt-[20px] origin-top-left z-40 duration-1000 ease-linear;
+}
+.cont.active {
+  @apply rotate-[-12deg]  duration-500 ease-linear;
+}
+.content {
+  @apply text-white;
+}
+.content h1 {
+  @apply text-4xl uppercase font-bold pt-9 pb-10;
+}
+.content h3 {
+  @apply text-2xl  font-bold pb-10 pt-5;
+}
+.content p {
+  @apply text-justify;
+}
+.content span {
+  @apply text-justify;
+}
+
+.circle-cont {
+  @apply fixed top-[-60px] left-[-60px] z-50;
+}
+.circle {
+  @apply w-36 h-36 bg-pink-400 flex rounded-full justify-center items-center relative duration-500  ease-linear;
+}
+.circle.active {
+  @apply rotate-[-135deg] duration-500 ease-linear;
+}
+.circle .close {
+  @apply rotate-[50deg] absolute left-5 duration-500;
+}
+.circle .close:hover {
+  @apply rotate-[230deg] duration-500;
+}
+.circle .menu {
+  @apply absolute right-8 bottom-8 duration-500;
+}
+.circle .menu:hover {
+  @apply rotate-180 duration-500;
+}
+nav {
+  @apply fixed left-5 bottom-24 z-0;
+}
+ul li {
+  @apply pt-3 font-semibold text-[#3f3f3f] ease-linear duration-100;
+}
+ul li:hover {
+  @apply translate-y-[-5px] ease-linear duration-100;
+}
+ul li + li {
+  @apply ml-1;
+}
+ul li + li + li {
+  @apply ml-3;
+}
